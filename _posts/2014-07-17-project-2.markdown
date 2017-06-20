@@ -8,7 +8,8 @@ img: javaPoker.png
 thumbnail: javaPoker.png
 alt: image-alt
 project-date: April 2014
-client: Start Bootstrap
+client: Wow Code
+clientLink: bing.com/ra
 category: Software Development
 description: Learned the basics of Java while experimenting with structures such as ArrayLists for my AP Computer Science Class.
 
