@@ -1,0 +1,44 @@
+url: http://liamrlawrence.com
+baseurl:
+
+# Site settings
+title: Liam Lawrence
+email: liamrlawrence@gmail.com
+description: "Liam Lawrence is an aspiring Electrical Engineer with
+experience in embedded hardware, robotics systems and computer vision."
+
+# Team names, titles and social links
+people:
+- name: Liam Lawrence
+  pic: 1
+  position: Lead Designer
+  social:
+    - title: twitter
+      url: #
+    - title: facebook
+      url: #
+    - title: stack-overflow
+      url: #
+
+# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+social:
+  - title: twitter
+    url: http://twitter.com/liamrlawrence
+  #- title: facebook
+  #  url:
+  - title: stack-overflow
+    url: https://stackoverflow.com/users/8167040/liam-lawrence 
+  #- title: bitbucket 
+  #  url: http://bitbucket.org/jekyll
+  - title: github
+    url: http://github.com/and3212
+
+# Postal address (add as many lines as necessary)
+address:
+  #- line: 3481 Melrose Place
+  - line: Blacksburg, VA 24060
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+theme: minima

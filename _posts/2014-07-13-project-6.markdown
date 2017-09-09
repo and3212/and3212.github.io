@@ -1,0 +1,15 @@
+---
+title: Cobra Vision
+subtitle: Computer Vision
+layout: default
+modal-id: 6
+date: 2014-07-15
+img: vision.png
+thumbnail: vision2.png
+alt: image-alt
+project-date: Winter 2016 - 2017
+client: C++
+category: Software Development
+description: Wrote an open source algorithm in Intel's OpenCV library to locate a target and get data from that, this was heavily using in the FIRST Robotics FRC 2017 game and even has wiki tutorials for understanding the code as well as the basic concepts of computer vision.
+
+---
