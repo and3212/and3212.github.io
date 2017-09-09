@@ -11,7 +11,7 @@
   $(document).ready(function() {
 
     // full Scren Page active
-  	$('.th-fullpage').fullpage({
+  $('.th-fullpage').fullpage({
   		autoScrolling: false,
   		fitToSection: false
   	});
@@ -40,7 +40,7 @@
   $('#th-video').magnificPopup({
       items: [
         {
-          src: 'video/ocean.mp4',
+          src: 'video/circuitBoard.mp4',
           type: 'iframe' // this overrides default type
         }
       ],
