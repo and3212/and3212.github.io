@@ -23,7 +23,6 @@
     <!-- fullpage -->
     <link rel="stylesheet" href="css/vendor/fullpage.min.css">
     <link rel="stylesheet" href="css/vendor/playfairdisplaysc.css">
-    <link rel="stylesheet" href="css/vendor/font-awesome.min.css">
     <!-- Font-awesome -->
     <link rel="stylesheet" href="fonts/font-awesome5/css/font-awesome-light.css">
     <link rel="stylesheet" href="fonts/font-awesome5/css/font-awesome-core.css">
@@ -71,10 +70,13 @@
 
   <!-- header-section
   =========================-->
-  <header class="header main header_video th-fullpage" data-vide-bg="video/ram">
+  <header class="header th-fullpage" data-parallax="scroll" data-image-src="img/header_bg/banner-img.jpg">
     <div class="section">
       <div class="container">
         <div class="row">
+          <div class="logo">
+            <img src="img/Fiction-logo.png" alt="Logo">
+          </div>
           <button id="trigger-overlay" class="th-nav-btn" type="button"><i class="tf-ion-android-menu"></i></button>
           <div class="col-md-12">
             <h1 class="text-center">Liam Lawrence <br>
@@ -86,7 +88,7 @@
 
               <nav>
                 <ul class="th-nav">
-                  <li><a href="index-video.html">Home</a></li>
+                  <li><a href="index.html">Home</a></li>
                   <li><a href="services.html">Services</a></li>
                   <li><a href="portfolio.html">Portfolio</a></li>
                   <li><a href="blog.html">Blog</a></li>
@@ -94,13 +96,72 @@
                 </ul>
               </nav>
             </div><!--/.End Nav -->
+
           </div>
         </div><!-- /.row End -->
       </div>
     </div>
   </header>
 
-    <!-- Skills Sections
+  <!-- Case Study Sections
+  =========================-->
+  <section class="case-study">
+    <div class="text-center">
+      <h2 class="box-title">Case Study</h2>
+    </div>
+    <!-- Case Study Description
+      top section -->
+    <div class="case-study-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <!-- inner sub-title -->
+            <div class="content">
+              <h4 class="inner-title">E Banks That Accept Us Casino Players</h4>
+              <p class="case-description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euiyd tincidunt ut laoreet dolore magna aliquam nibh utpat.Ullamcorper suscipit lobo nibh euiyd tinci- dunt ut laoreet.</p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem impedit molestias cumque dolorum, sunt, provident blanditiis tempora, aut explicabo error ipsa repudiandae. Dolores eius eaque eum mollitia esse nisi necessitatibus distinctio ea, dolorem non, optio minima temporibus blanditiis, quidem aperiam!
+              </p>
+              <!-- View More Details -->
+              <a class="btn btn-default th-btn" href="#" role="button">View More</a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="img-content">
+              <img class="img-responsive" src="img/case-study/case-study-img1.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Case Study Description
+      bottom section -->
+    <div class="case-study-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="img-content">
+              <img class="img-responsive" src="img/case-study/case-study-img1.png" alt="">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <!-- inner sub-title -->
+            <div class="content">
+              <h4 class="inner-title">E Banks That Accept Us Casino Players</h4>
+              <p class="case-description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euiyd tincidunt ut laoreet dolore magna aliquam nibh utpat.Ullamcorper suscipit lobo nibh euiyd tinci- dunt ut laoreet.</p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex unde soluta, nesciunt consequuntur accusamus sint! Eaque quod consectetur laborum quae repudiandae illum hic explicabo sunt perferendis. Voluptas, fugiat eos sed!
+              </p>
+              <!-- View More Details -->
+              <a class="btn btn-default th-btn" href="#" role="button">View More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Sections
   =========================-->
   <section class="services">
     <div class="container">
@@ -119,7 +180,7 @@
               <h3 class="title">Embedded Hardware</h3>
             </div>
             <p class="service-description">
-              Experience using Altium Designer, Eagle CAD, and <br> working with embedded systems.
+              Experience using Altium Designer, Eagle CAD, and working with embedded systems.
             </p>
           </div>
         </div>
@@ -132,7 +193,7 @@
               <h3 class="title">Robotics Systems</h3>
             </div>
             <p class="service-description">
-              3+ years of experience working with robots with <br> FIRST FRC robotics team 401.
+              3+ years of experience working with robots with FIRST FRC robotics team 401.
             </p>
           </div>
         </div>
@@ -145,7 +206,7 @@
               <h3 class="title">Computer Vision</h3>
             </div>
             <p class="service-description">
-              2+ years of experience working with Intel's OpenCV <br> library for computer vision.
+              2+ years of experience working with Intel's OpenCV library for computer vision.
             </p>
           </div>
         </div>
@@ -153,40 +214,6 @@
     </div>
   </section>
       
-      
-  <!-- Case Study Sections
-  =========================-->
-  <section class="services">
-    <div class="text-center">
-      <h2 class="box-title">About Me</h2>
-    </div>
-    <!-- Case Study Description
-      top section -->
-    <div class="case-study-content">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <!-- inner sub-title -->
-            <div class="content">
-              <h4 class="inner-title">E Banks That Accept Us Casino Players</h4>
-              <p class="case-description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euiyd tincidunt ut laoreet dolore magna aliquam nibh utpat.Ullamcorper suscipit lobo nibh euiyd tinci- dunt ut laoreet.</p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem impedit molestias cumque dolorum, sunt, provident blanditiis tempora, aut explicabo error ipsa repudiandae. Dolores eius eaque eum mollitia esse nisi necessitatibus distinctio ea, dolorem non, optio minima temporibus blanditiis, quidem aperiam!
-              </p>
-              <!-- View More Details -->
-              <a class="btn btn-default th-btn" href="portfolio-parallax.html" role="button">My Portfolio</a>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="img-content">
-              <img class="img-responsive" src="img/case-study/case-study-img1.png" alt="">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Clients Sections
   =========================-->
   <section class="clients" data-parallax="scroll" data-image-src="img/home/clients-logo-bg-2.jpg">
@@ -195,7 +222,7 @@
         <div class="row">
           <div class="col-md-12">
             <div class="title text-center">
-              <h2>Work Experience</h2>
+              <h2>Job Experience</h2>
             </div>
             <div class="col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 padding-0 slider-main">
             <div id="th-slider" class="th-sldier">
@@ -208,11 +235,11 @@
                   <div class="clients-area">
                     <!-- <div class="round-shape"></div> -->
                     <div class="clients-description">
-                      <p>Worked on C and C++ multithreading applications with Graduate level researches to run programs on Virginia Tech's computer cluster Seemore. consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</p>
-                      <img src="img/clients-img1.png" alt="Clients">
+                      <p>Worked with graduate level researchers on C/C++ multi-threading applications using Virginia Tech's computer cluster Seemore.</p>
+                      <img src="img/workExperience/vtComp.jpg" alt="Clients">
                       <div class=" th-media-body">
                         <h3 class="th-media-heading">Virginia Tech Computer Science Department</h3>
-                        <h4 class="th-media-subheading">Intern Summer 2016</h4>
+                        <h4 class="th-media-subheading">Intern - Summer 2016</h4>
                       </div>
                     </div>
                   </div>
@@ -224,8 +251,8 @@
                 <!-- <div class="col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 padding-0"> -->
                   <div class="clients-area">
                     <!-- <div class="round-shape"></div> -->
-                    <div class="clients-description">
-                      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna. ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</p>
+                    clients-des<div class="clients-description">
+                      <p>Lorem ipsum dolor sit aasdasad, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreee dolore magna. ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</p>
                       <img src="img/clients-img1.png" alt="Clients">
                       <div class=" th-media-body">
                         <h3 class="th-media-heading">Paul Lapkin</h3>
@@ -246,7 +273,7 @@
   </section>
 
   <!-- Clients Logo Sections
-  =========================
+  ========================
   <section class="clients-logo">
     <div class="section">
       <div class="container">
@@ -275,14 +302,11 @@
               </div>
             </div>
           </div>
-        </div>
+        </div><!-- /.End row --><!--
       </div>
     </div>
-  </section>
-=========================-->
-
-
-  <!-- Contact Us Sections
+  </section>= -->
+   <!-- Contact Us Sections 
   =========================-->
   <section class="contact-us">
     <div class="contact-description">
@@ -344,9 +368,8 @@
                         <div class="col-md-12">
                             <ul>
                                 <li><a href="index.html">Home</a></li>
-                                <li><a href="services.html">Services</a></li>
+                                <li><a href="skills-parallax.html">Skills</a></li>
                                 <li><a href="portfolio.html">Portfolio</a></li>
-                                <li><a href="#">Our Team</a></li>
                                 <li><a href="contact.html">Contact</a></li>
                             </ul>
                         </div>
@@ -354,8 +377,8 @@
                     <div class="text-center">
                         <div class="col-md-12">
                             <div class="copyright">
-                                <p>&copy; We are deviserweb.All rights reserved, 2016. <br>
-                                Designed by Junaed.</p>
+                                <p>&copy; All rights reserved, 2017. <br>
+                                Designed by Liam Lawrence.</p>
                             </div>
                         </div>
                     </div>
