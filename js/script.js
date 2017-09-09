@@ -74,7 +74,7 @@
   }); 
 
 
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-plLi-B0gT73hxTfZRmxinWUbXYOML20&callback=initMap"type="text/javascript"></script>
+
     // map
     // When the window has finished loading create our google map below
     google.maps.event.addDomListener(window, 'load', init);
