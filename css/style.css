@@ -5,7 +5,7 @@
 /* Service section bg */
 /* blog slider pagination img */
 /*----------  
- 	Google fonts  
+    Google fonts  
  ----------*/
 @import url("https://fonts.googleapis.com/css?family=Lora:400i|Poppins:300,400,500,600,700|Roboto:100i,300,300i,400,500,500i,700,900");
 /* Global Body Style */
@@ -829,7 +829,7 @@ div.loading {
 .contact-us {
   position: relative;
   background: #171717; }
-  .contact-us #google-map {
+  .contact-us #contact-block {
     height: 410px; }
 
 .contact-description {
