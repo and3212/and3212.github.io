@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Liam Lawrence</title>
+    <title>Contact</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -24,12 +24,6 @@
     <link rel="stylesheet" href="css/vendor/fullpage.min.css">
     <link rel="stylesheet" href="css/vendor/playfairdisplaysc.css">
     <link rel="stylesheet" href="css/vendor/font-awesome.min.css">
-    <!-- Font-awesome -->
-    <link rel="stylesheet" href="fonts/font-awesome5/css/font-awesome-light.css">
-    <link rel="stylesheet" href="fonts/font-awesome5/css/font-awesome-core.css">
-    <link rel="stylesheet" href="fonts/font-awesome5/css/font-awesome-regular.css">
-    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.css">
-
 
     <!-- Revolution Slider -->
     <link rel="stylesheet" href="css/vendor/settings.css">
@@ -38,6 +32,15 @@
 
     <link rel="stylesheet" href="css/style.css">
     <script src="js/vendor/modernizr.min.js"></script>
+      
+    <!-- Protects Email -->
+    <style type="text/css">
+        .e-mail:before {
+            content: attr(data-website) "\0040" attr(data-user);
+            unicode-bidi: bidi-override;
+            direction: rtl;
+        }
+    </style>
   </head>
   <body>
     <!--[if lt IE 8]>
@@ -298,6 +301,7 @@
     <div id="contact-block">"></div>
   </section>
 
+<!-- Footer -->
 <footer class="footer">
         <div class="container">
             <div class="row">
@@ -326,7 +330,7 @@
                                     Write me : <a href="mailto:liamrlawrence.com">liamrlawrence.com</a>
                                     -->
                                     Contact me : (540) 739-2436<br>
-                                    Write me : liamrlawrence@gmail.com
+                                    Write me : <span class="e-mail" data-user="ecnerwalrmail" data-website="moc.liamg"></span>
                                 </p>
                             </div>
                         </div>
@@ -397,7 +401,7 @@
     <script type="text/javascript" src="js/vendor/extensions/revolution.extension.video.min.js"></script>
 
     <!-- =======
-        Main Js
+       Main Js
     ============ -->
     <script src="js/script.js"></script>
     </body>

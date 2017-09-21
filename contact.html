@@ -32,6 +32,15 @@
 
     <link rel="stylesheet" href="css/style.css">
     <script src="js/vendor/modernizr.min.js"></script>
+      
+    <!-- Protects Email -->
+    <style type="text/css">
+        .e-mail:before {
+            content: attr(data-website) "\0040" attr(data-user);
+            unicode-bidi: bidi-override;
+            direction: rtl;
+        }
+    </style>
   </head>
   <body>
     <!--[if lt IE 8]>
@@ -132,7 +141,8 @@
     </div>
   </section>
 
-    <footer class="footer">
+<!-- Footer -->
+<footer class="footer">
         <div class="container">
             <div class="row">
                 <div class="container">
@@ -160,7 +170,7 @@
                                     Write me : <a href="mailto:liamrlawrence.com">liamrlawrence.com</a>
                                     -->
                                     Contact me : (540) 739-2436<br>
-                                    Write me : liamrlawrence@gmail.com
+                                    Write me : <span class="e-mail" data-user="ecnerwalrmail" data-website="moc.liamg"></span>
                                 </p>
                             </div>
                         </div>
@@ -189,8 +199,8 @@
                     <div class="text-center">
                         <div class="col-md-12">
                             <div class="copyright">
-                                <p>&copy; We are deviserweb.All rights reserved, 2016. <br>
-                                Designed by Junaed.</p>
+                                <p>&copy; All rights reserved, 2017. <br>
+                                Designed by Liam Lawrence.</p>
                             </div>
                         </div>
                     </div>
@@ -198,7 +208,6 @@
             </div>
         </div>
     </footer>
-
 
     <script src="js/vendor/jquery.min.js"></script>
     <script src="js/vendor/bootstrap.min.js"></script>
@@ -232,9 +241,8 @@
     <script type="text/javascript" src="js/vendor/extensions/revolution.extension.video.min.js"></script>
 
     <!-- =======
-        Main Js
+       Main Js
     ============ -->
     <script src="js/script.js"></script>
-  </body>
+    </body>
 </html>
-

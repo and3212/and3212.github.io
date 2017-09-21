@@ -1,9 +1,9 @@
 <!doctype html>
 <html class="no-js" lang="">
-  <head>
+    <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Expertise</title>
+    <title>Contact</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -32,6 +32,15 @@
 
     <link rel="stylesheet" href="css/style.css">
     <script src="js/vendor/modernizr.min.js"></script>
+      
+    <!-- Protects Email -->
+    <style type="text/css">
+        .e-mail:before {
+            content: attr(data-website) "\0040" attr(data-user);
+            unicode-bidi: bidi-override;
+            direction: rtl;
+        }
+    </style>
   </head>
   <body>
     <!--[if lt IE 8]>
@@ -184,8 +193,9 @@
       </div>
     </div>
   </section>
-
-    <footer class="footer">
+      
+<!-- Footer -->
+<footer class="footer">
         <div class="container">
             <div class="row">
                 <div class="container">
@@ -206,10 +216,14 @@
                             ========================== -->
                             <div class="footer-address">
                                 <h3 class="footer-title">Address</h3>
-                                <p>DeviserWeb 24/A,Jalalabad amborkhana amagnina, Sylhet.</p>
+                                <p>Blacksburg, Virginia</p>
                                 <p class="contact-address">
-                                    Contact us : <a href="tel:+610383666274">+61 (0) 3 8366 6274 </a> <br>
-                                    Write us : <a href="mailto:info@info.com">mail@itsnuman.com</a>
+                                    <!--
+                                    Contact me : <a href="tel:+610383666274">+61 (0) 3 8366 6274 </a> <br>
+                                    Write me : <a href="mailto:liamrlawrence.com">liamrlawrence.com</a>
+                                    -->
+                                    Contact me : (540) 739-2436<br>
+                                    Write me : <span class="e-mail" data-user="ecnerwalrmail" data-website="moc.liamg"></span>
                                 </p>
                             </div>
                         </div>
@@ -219,8 +233,8 @@
                             <div class="footer-social-media">
                                 <h3 class="footer-title">Keep in touch</h3>
                                 <ul class="footer-media-link">
-                                    <li><a href="#"><i class="fa fa-skype" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                    <li><a href="https://github.com/and3212"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a></li>
                                     <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
                                 </ul>
                             </div>
@@ -230,7 +244,6 @@
                         <div class="col-md-12">
                             <ul>
                                 <li><a href="/">Home</a></li>
-                                <li><a href="services">Services</a></li>
                                 <li><a href="portfolio">Portfolio</a></li>
                                 <li><a href="contact">Contact</a></li>
                             </ul>
@@ -239,8 +252,8 @@
                     <div class="text-center">
                         <div class="col-md-12">
                             <div class="copyright">
-                                <p>&copy; We are deviserweb.All rights reserved, 2016. <br>
-                                Designed by Junaed.</p>
+                                <p>&copy; All rights reserved, 2017. <br>
+                                Designed by Liam Lawrence.</p>
                             </div>
                         </div>
                     </div>
@@ -248,7 +261,6 @@
             </div>
         </div>
     </footer>
-
 
     <script src="js/vendor/jquery.min.js"></script>
     <script src="js/vendor/bootstrap.min.js"></script>
@@ -280,11 +292,10 @@
     <script type="text/javascript" src="js/vendor/extensions/revolution.extension.parallax.min.js"></script>
     <script type="text/javascript" src="js/vendor/extensions/revolution.extension.slideanims.min.js"></script>
     <script type="text/javascript" src="js/vendor/extensions/revolution.extension.video.min.js"></script>
-    
+
     <!-- =======
-        Main Js
+       Main Js
     ============ -->
     <script src="js/script.js"></script>
-  </body>
+    </body>
 </html>
-
