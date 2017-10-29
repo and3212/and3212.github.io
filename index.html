@@ -1,229 +1,250 @@
 <!DOCTYPE html>
-<html class="no-js" lang="">
-    <head>
-        <!-- meta charset -->
-        <meta charset="utf-8">
-        <!-- site title -->
-        <title>Phantom | Personal Resume Template</title>
-        <!-- meta description -->
-        <meta name="description" content="">
-        <!-- mobile viwport meta -->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- fevicon -->
-        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<!-- saved from url=(0076)https://catalin.red/dist/uploads/2011/11/css3-slick-progress-bars-demo.html# -->
+<html class="gr__catalin_red"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Stylish CSS3 progress bars - demo</title>
+    <style>
+        body {
+            background: #222 url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAMAAAC67D+PAAAAFVBMVEUqKiopKSkoKCgjIyMuLi4kJCQtLS0dJckpAAAAO0lEQVR42iXLAQoAUQhCQSvr/kfe910jHIikElsl5qVFa1iE5f0Pom/CNZdbNM6756lQ41NInMfuFPgAHVEAlGk4lvIAAAAASUVORK5CYII=");
+			width: 360px;
+            margin: 0 auto;  
+			font: 13px 'trebuchet MS',Arial,Helvetica;
+        }
+	
+		h2, p {
+			text-align: center;
+			color: #fafafa;
+			text-shadow: 0 1px 0 #111;	
+		}
+		
+		a {
+			color: #777;
+		}
+
+		/*---------------------------*/			
         
-        <!-- ================================
-        CSS Files
-        ================================= -->
-        <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i|Open+Sans:400,600,700,800" rel="stylesheet">
-        <link rel="stylesheet" href="css/themefisher-fonts.min.css">
-        <link rel="stylesheet" href="css/owl.carousel.min.css">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/main.css">
-        <link id="color-changer" rel="stylesheet" href="css/colors/themeColor.css">
+        .progress-bar {
+            background-color: #1a1a1a;
+            height: 25px;
+            padding: 5px;
+            width: 350px;
+            margin: 70px 0 20px 0;			
+            -moz-border-radius: 5px;
+			-webkit-border-radius: 5px;
+			border-radius: 5px;
+            -moz-box-shadow: 0 1px 5px #000 inset, 0 1px 0 #444;
+			-webkit-box-shadow: 0 1px 5px #000 inset, 0 1px 0 #444;
+			box-shadow: 0 1px 5px #000 inset, 0 1px 0 #444;           
+        }
         
-        <!-- Font-awesome -->
-        <link rel="stylesheet" href="fonts/font-awesome5/css/font-awesome-light.css">
-        <link rel="stylesheet" href="fonts/font-awesome5/css/font-awesome-core.css">
-        <link rel="stylesheet" href="fonts/font-awesome5/css/font-awesome-regular.css">
-        <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.css">
-    </head>
+        .progress-bar span {
+            display: inline-block;
+            height: 100%;
+			background-color: #777;
+            -moz-border-radius: 3px;
+			-webkit-border-radius: 3px;
+			border-radius: 3px;
+            -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
+			-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
+			box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
+			-webkit-transition: width .4s ease-in-out;
+			-moz-transition: width .4s ease-in-out;
+			-ms-transition: width .4s ease-in-out;
+			-o-transition: width .4s ease-in-out;
+			transition: width .4s ease-in-out;		
+        }
+		
+		/*---------------------------*/			
+		
+        .blue span {
+            background-color: #34c2e3;   
+        }
 
-    <body>
+        .orange span {
+			  background-color: #fecf23;
+			  background-image: -webkit-gradient(linear, left top, left bottom, from(#fecf23), to(#fd9215));
+			  background-image: -webkit-linear-gradient(top, #fecf23, #fd9215);
+			  background-image: -moz-linear-gradient(top, #fecf23, #fd9215);
+			  background-image: -ms-linear-gradient(top, #fecf23, #fd9215);
+			  background-image: -o-linear-gradient(top, #fecf23, #fd9215);
+			  background-image: linear-gradient(top, #fecf23, #fd9215);  
+        }	
 
-        <div class="preloader">
-            <div class="loading-mask"></div>
-            <div class="loading-mask"></div>
-            <div class="loading-mask"></div>
-            <div class="loading-mask"></div>
-            <div class="loading-mask"></div>
-        </div>
-
-
-
-        <main class="site-wrapper">
-            <div class="pt-table">
-                <div class="pt-tablecell page-home relative" style="background-image: url('img/banner.jpg');">
-                    <div class="overlay"></div>
-
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
-                                <div class="page-title home text-center">
-                                    <img src="img/phantom.png" alt="">
-                                    <p>A product designer from England, who focuses on interactive design &amp; A freelance designer focusing on typography &amp; clean interfaces. Also works in Google.</p>
-                                </div>
-
-                                <div class="hexagon-menu clear">
-                                    <div class="hexagon-item">
-                                        <div class="hex-item">
-                                            <div></div>
-                                            <div></div>
-                                            <div></div>
-                                        </div>
-                                        <div class="hex-item">
-                                            <div></div>
-                                            <div></div>
-                                            <div></div>
-                                        </div>
-                                        <a href="welcome.html" class="hex-content">
-                                            <span class="hex-content-inner">
-                                                <span class="icon">
-                                                    <i class="tf-dial"></i>
-                                                </span>
-                                                <span class="title">Welcome</span>
-                                            </span>
-                                            <svg viewbox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
-                                        </a>
-                                    </div>
-                                    <div class="hexagon-item">
-                                        <div class="hex-item">
-                                            <div></div>
-                                            <div></div>
-                                            <div></div>
-                                        </div>
-                                        <div class="hex-item">
-                                            <div></div>
-                                            <div></div>
-                                            <div></div>
-                                        </div>
-                                        <a href="about.html" class="hex-content">
-                                            <span class="hex-content-inner">
-                                                <span class="icon">
-                                                    <i class="fal fa-user"></i>
-                                                </span>
-                                                <span class="title">About</span>
-                                            </span>
-                                            <svg viewbox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
-                                        </a>
-                                    </div>
-                                    <div class="hexagon-item">
-                                        <div class="hex-item">
-                                            <div></div>
-                                            <div></div>
-                                            <div></div>
-                                        </div>
-                                        <div class="hex-item">
-                                            <div></div>
-                                            <div></div>
-                                            <div></div>
-                                        </div>
-                                        <a href="services.html" class="hex-content">
-                                            <span class="hex-content-inner">
-                                                <span class="icon">
-                                                    <i class="tf-tools-2"></i>
-                                                </span>
-                                                <span class="title">Services</span>
-                                            </span>
-                                            <svg viewbox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
-                                        </a>    
-                                    </div>
-                                    <div class="hexagon-item">
-                                        <div class="hex-item">
-                                            <div></div>
-                                            <div></div>
-                                            <div></div>
-                                        </div>
-                                        <div class="hex-item">
-                                            <div></div>
-                                            <div></div>
-                                            <div></div>
-                                        </div>
-                                        <a href="resume" class="hex-content">
-                                            <span class="hex-content-inner">
-                                                <span class="icon">
-                                                    <i class="fal fa-pencil"></i>
-                                                </span>
-                                                <span class="title">Resume</span>
-                                            </span>
-                                            <svg viewbox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
-                                        </a>
-                                    </div>
-                                    <div class="hexagon-item">
-                                        <div class="hex-item">
-                                            <div></div>
-                                            <div></div>
-                                            <div></div>
-                                        </div>
-                                        <div class="hex-item">
-                                            <div></div>
-                                            <div></div>
-                                            <div></div>
-                                        </div>
-                                        <a href="works" class="hex-content">
-                                            <span class="hex-content-inner">
-                                                <span class="icon">
-                                                    <i class="fal fa-briefcase"></i>
-                                                </span>
-                                                <span class="title">Portfolio</span>
-                                            </span>
-                                            <svg viewbox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
-                                        </a>
-                                    </div>
-                                    <div class="hexagon-item">
-                                        <div class="hex-item">
-                                            <div></div>
-                                            <div></div>
-                                            <div></div>
-                                        </div>
-                                        <div class="hex-item">
-                                            <div></div>
-                                            <div></div>
-                                            <div></div>
-                                        </div>
-                                        <a href="testimonials.html" class="hex-content">
-                                            <span class="hex-content-inner">
-                                                <span class="icon">
-                                                    <i class="tf-chat"></i>
-                                                </span>
-                                                <span class="title">Testimonials</span>
-                                            </span>
-                                            <svg viewbox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
-                                        </a>
-                                    </div>
-                                    <div class="hexagon-item">
-                                        <div class="hex-item">
-                                            <div></div>
-                                            <div></div>
-                                            <div></div>
-                                        </div>
-                                        <div class="hex-item">
-                                            <div></div>
-                                            <div></div>
-                                            <div></div>
-                                        </div>
-                                        <a href="contact.html" class="hex-content">
-                                            <span class="hex-content-inner">
-                                                <span class="icon">
-                                                    <i class="fal fa-envelope"></i>
-                                                </span>
-                                                <span class="title">Contact</span>
-                                            </span>
-                                            <svg viewbox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
-                                        </a>
-                                    </div>
-                                </div> <!-- /.hexagon-menu -->
-
-                            </div> <!-- /.col-xs-12 -->
-
-                        </div> <!-- /.row -->
-                    </div> <!-- /.container -->
-
-                </div> <!-- /.pt-tablecell -->
-            </div> <!-- /.pt-table -->
-        </main> <!-- /.site-wrapper -->
+        .green span {
+			  background-color: #a5df41;
+			  background-image: -webkit-gradient(linear, left top, left bottom, from(#a5df41), to(#4ca916));
+			  background-image: -webkit-linear-gradient(top, #a5df41, #4ca916);
+			  background-image: -moz-linear-gradient(top, #a5df41, #4ca916);
+			  background-image: -ms-linear-gradient(top, #a5df41, #4ca916);
+			  background-image: -o-linear-gradient(top, #a5df41, #4ca916);
+			  background-image: linear-gradient(top, #a5df41, #4ca916);  
+        }		
+		
+		/*---------------------------*/		
+		
+		.stripes span {
+            -webkit-background-size: 30px 30px;
+            -moz-background-size: 30px 30px;
+            background-size: 30px 30px;			
+			background-image: -webkit-gradient(linear, left top, right bottom,
+								color-stop(.25, rgba(255, 255, 255, .15)), color-stop(.25, transparent),
+								color-stop(.5, transparent), color-stop(.5, rgba(255, 255, 255, .15)),
+								color-stop(.75, rgba(255, 255, 255, .15)), color-stop(.75, transparent),
+								to(transparent));
+            background-image: -webkit-linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%,
+                                transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%,
+                                transparent 75%, transparent);
+            background-image: -moz-linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%,
+                                transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%,
+                                transparent 75%, transparent);
+            background-image: -ms-linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%,
+                                transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%,
+                                transparent 75%, transparent);
+            background-image: -o-linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%,
+                                transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%,
+                                transparent 75%, transparent);
+            background-image: linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%,
+                                transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%,
+                                transparent 75%, transparent);            
+            
+            -webkit-animation: animate-stripes 3s linear infinite;
+            -moz-animation: animate-stripes 3s linear infinite;       		
+		}
         
-        <!-- ================================
-        JavaScript Libraries
-        ================================= -->
-        <script src="js/vendor/jquery-2.2.4.min.js"></script>
-        <script src="js/vendor/bootstrap.min.js"></script>
-        <!-- <script src="js/jquery.easing.min.js"></script> -->
-        <script src="js/isotope.pkgd.min.js"></script>
-        <script src="js/jquery.nicescroll.min.js"></script>
-        <script src="js/owl.carousel.min.js"></script>
-        <script src="js/jquery-validation.min.js"></script>
-        <script src="js/form.min.js"></script>
-        <script src="js/main.js"></script>
-    </body>
-</html>
+        @-webkit-keyframes animate-stripes { 
+			0% {background-position: 0 0;} 100% {background-position: 60px 0;}
+        }
+        
+        
+        @-moz-keyframes animate-stripes {
+			0% {background-position: 0 0;} 100% {background-position: 60px 0;}
+        }
+		
+		/*---------------------------*/	 
+
+		.shine span {
+			position: relative;
+		}
+		
+		.shine span::after {
+			content: '';
+			opacity: 0;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: #fff;
+            -moz-border-radius: 3px;
+			-webkit-border-radius: 3px;
+			border-radius: 3px;			
+			
+            -webkit-animation: animate-shine 2s ease-out infinite;
+            -moz-animation: animate-shine 2s ease-out infinite; 			
+		}
+
+        @-webkit-keyframes animate-shine { 
+			0% {opacity: 0; width: 0;}
+			50% {opacity: .5;}
+			100% {opacity: 0; width: 95%;}
+        }
+        
+        
+        @-moz-keyframes animate-shine {
+			0% {opacity: 0; width: 0;}
+			50% {opacity: .5;}
+			100% {opacity: 0; width: 95%;}
+        }
+
+		/*---------------------------*/	 
+		
+		.glow span {
+            -moz-box-shadow: 0 5px 5px rgba(255, 255, 255, .7) inset, 0 -5px 5px rgba(255, 255, 255, .7) inset;
+			-webkit-box-shadow: 0 5px 5px rgba(255, 255, 255, .7) inset, 0 -5px 5px rgba(255, 255, 255, .7) inset;
+			box-shadow: 0 5px 5px rgba(255, 255, 255, .7) inset, 0 -5px 5px rgba(255, 255, 255, .7) inset;
+			
+            -webkit-animation: animate-glow 1s ease-out infinite;
+            -moz-animation: animate-glow 1s ease-out infinite; 			
+		}
+
+		@-webkit-keyframes animate-glow {
+		 0% { -webkit-box-shadow: 0 5px 5px rgba(255, 255, 255, .7) inset, 0 -5px 5px rgba(255, 255, 255, .7) inset;} 
+		 50% { -webkit-box-shadow: 0 5px 5px rgba(255, 255, 255, .3) inset, 0 -5px 5px rgba(255, 255, 255, .3) inset;} 
+		 100% { -webkit-box-shadow: 0 5px 5px rgba(255, 255, 255, .7) inset, 0 -5px 5px rgba(255, 255, 255, .7) inset;}
+		 }
+
+		@-moz-keyframes animate-glow {
+		 0% { -moz-box-shadow: 0 5px 5px rgba(255, 255, 255, .7) inset, 0 -5px 5px rgba(255, 255, 255, .7) inset;} 
+		 50% { -moz-box-shadow: 0 5px 5px rgba(255, 255, 255, .3) inset, 0 -5px 5px rgba(255, 255, 255, .3) inset;} 
+		 100% { -moz-box-shadow: 0 5px 5px rgba(255, 255, 255, .7) inset, 0 -5px 5px rgba(255, 255, 255, .7) inset;}
+		 }
+    </style>
+</head>
+
+<body data-gr-c-s-loaded="true">
+
+<br><br>
+<h2>The Office Watch Progress</h2>
+
+<div class="progress-bar blue stripes">
+    <span style="width: 100%;"></span>
+</div>
+    
+<div class="progress-bar blue stripes">
+    <span style="width: 100%;"></span>
+</div>
+
+<div class="progress-bar blue stripes">
+    <span style="width: 100%;"></span>
+</div>
+    
+<div class="progress-bar blue stripes">
+    <span style="width: 100%;"></span>
+</div>
+    
+<div class="progress-bar blue stripes">
+    <span style="width: 100%;"></span>
+</div>
+    
+<div class="progress-bar blue stripes">
+    <span style="width: 100%;"></span>
+</div>
+    
+<div class="progress-bar blue stripes">
+    <span style="width: 100%;"></span>
+</div>
+    
+<div class="progress-bar blue stripes">
+    <span style="width: 100%;"></span>
+</div>
+    
+<div class="progress-bar blue stripes">
+    <span style="width: 100%;"></span>
+</div>
+<p>Set above to:
+	<a href="https://catalin.red/dist/uploads/2011/11/css3-slick-progress-bars-demo.html#" class="quarter">25%</a> /
+	<a href="https://catalin.red/dist/uploads/2011/11/css3-slick-progress-bars-demo.html#" class="half">50%</a> /
+	<a href="https://catalin.red/dist/uploads/2011/11/css3-slick-progress-bars-demo.html#" class="three-quarters">75%</a> /
+	<a href="https://catalin.red/dist/uploads/2011/11/css3-slick-progress-bars-demo.html#" class="full">100%</a>
+</p>
+
+
+<script src="./Stylish CSS3 progress bars - demo_files/jquery-latest.min.js"></script>
+<script>
+	$(document).ready(function(){ 
+		$('.quarter').click(function(){
+			$(this).parent().prev().children('span').css('width','25%');
+			});
+		$('.half').click(function(){
+			$(this).parent().prev().children('span').css('width','50%');
+			});
+		$('.three-quarters').click(function(){
+			$(this).parent().prev().children('span').css('width','75%');
+			});
+		$('.full').click(function(){
+			$(this).parent().prev().children('span').css('width','100%');
+			});			
+	});
+</script>
+
+
+</body></html>
