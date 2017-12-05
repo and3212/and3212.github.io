@@ -775,10 +775,10 @@ b i:last-child {
 .portfolio_item .portfolio_item_hover .item_info em {
     font-style: normal;
     display: inline-block;
-    background-color: #1379D6;
+    background-color: #0D4F8B;
     padding: 5px 20px;
     border-radius: 25px;
-    color: #333;
+    color: #FFF;
     margin-top: 10px;
     -webkit-transform: translateX(-100px);
     transform: translateX(-100px);
@@ -859,7 +859,7 @@ footer img {
     right: 10px;
     text-align: center;
     color: #fff;
-    background: rgba(255, 191, 0, 0.8);
+    background: rgba(0, 0, 0, 0.8); /* #0D4F8B = (13,79,139) */
     visibility: hidden;
     opacity: 0;
     -webkit-transition: opacity .3s 0s, visibility 0s .3s;
@@ -870,7 +870,7 @@ footer img {
 .cd-top.cd-fade-out,
 .no-touch .cd-top:hover {
     -webkit-transition: opacity .3s 0s, visibility 0s 0s;
-    transition: opacity .3s 0s, visibility 0s 0s;
+    transition: opacity .8s 0s, visibility 0s 0s;
 }
 
 .cd-top.cd-is-visible {
@@ -880,12 +880,12 @@ footer img {
 }
 
 .cd-top.cd-fade-out {
-    opacity: .5;
+    opacity: 0.8;
 }
 
 .no-touch .cd-top:hover,
 .no-touch .cd-top:focus {
-    background-color: #0D4F8B;
+    background-color: #ff0000;  /* TODO or should this be #FFF? */
     opacity: 1;
     color: #fff;
 }
@@ -1094,7 +1094,7 @@ textarea:focus {
 
 .btn-box:hover,
 .btn-box:focus {
-    background: #F5B700;
+    background: #1379D6;
     color: #fff;
 }
 
