@@ -127,3 +127,7 @@ function draw() {
 		}
 	}
 }
+
+function windowResized() {
+	slider.position((windowWidth/2)-(150/2), windowHeight - 100);
+}
