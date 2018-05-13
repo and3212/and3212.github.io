@@ -26,12 +26,12 @@ var laserEnabled = false;
 var laserIntensity = 255;
 
 var i = 0;
+var fileLoaded = false;
 
 function setup() {
-	createCanvas(1080, 1000);
+	var canvas = createCanvas(1080, 1000);
     background(0);
     frameRate(120);
-    command = loadStrings("p5/step.txt");
 
     // Shifts the origin to the bottom left
     scale(1, -1);
@@ -48,9 +48,13 @@ function setup() {
     strokeWeight(3);
     line(-width, 0, width, 0);
 
+	// Slider to control the speed
 	slider = createSlider(1, 100, 15, 1);
   	slider.position((windowWidth/2)-(150/2), windowHeight - 100);
   	slider.style('width', '150px');
+	
+	// Text input
+	canvas.drop(readFile);
 }
 
 function draw() {
@@ -58,74 +62,84 @@ function draw() {
     scale(1, -1);
     translate(60, (60 + (l1+l2)/2) -height);
     translate(l1 + l2, 0);  // Move the origin to the center of the arc
-  
-	for (var k = 0; k < slider.value(); k++) {
-		//Math for angles
-		switch (command[i]) {
-		    case "0x1":
-		        theta1 += MOTORSTEP;
-		        break;
-		    case "0x3":
-		        theta1 -= MOTORSTEP;
-		        break;
-		    case "0x4":
-		        theta2 += MOTORSTEP;
-		        break;
-		    case "0xC":
-		        theta2 -= MOTORSTEP;
-		        break;
 
-		    case "0x5":
-		        theta1 += MOTORSTEP;
-		        theta2 += MOTORSTEP;
-		        break;
-		    case "0x7":
-		        theta1 -= MOTORSTEP;
-		        theta2 += MOTORSTEP;
-		    case "0xD":
-		        theta1 += MOTORSTEP;
-		        theta2 -= MOTORSTEP;
-		    case "0xF":
-		        theta1 -= MOTORSTEP;
-		        theta2 -= MOTORSTEP;
+	if (fileLoaded) {
 
-		    case "0xA":
-		        laserEnabled = true;
-		        break;
-		    case "0xB":
-		        laserEnabled = false;
-		        break;
-		    case "0xE":
-		        i++;
-		        if (i > command.size - 1) {
-		            remove();
-				}
-		        
-		        laserIntensity = unhex(command[i].substring(2, command[i].length));
-				break;
-		}
+		for (var k = 0; k < slider.value(); k++) {
+			//Math for angles
+			switch (command[i]) {
+				case "0x1":
+				    theta1 += MOTORSTEP;
+				    break;
+				case "0x3":
+				    theta1 -= MOTORSTEP;
+				    break;
+				case "0x4":
+				    theta2 += MOTORSTEP;
+				    break;
+				case "0xC":
+				    theta2 -= MOTORSTEP;
+				    break;
 
-		px2 = (int)(cos(theta1) * l1);
-		py2 = (int)(sin(theta1) * l1);
-		px3 = (int)(cos(theta2 + theta1) * l2) + px2;
-		py3 = (int)(sin(theta2 + theta1) * l2) + py2;
+				case "0x5":
+				    theta1 += MOTORSTEP;
+				    theta2 += MOTORSTEP;
+				    break;
+				case "0x7":
+				    theta1 -= MOTORSTEP;
+				    theta2 += MOTORSTEP;
+				case "0xD":
+				    theta1 += MOTORSTEP;
+				    theta2 -= MOTORSTEP;
+				case "0xF":
+				    theta1 -= MOTORSTEP;
+				    theta2 -= MOTORSTEP;
 
+				case "0xA":
+				    laserEnabled = true;
+				    break;
+				case "0xB":
+				    laserEnabled = false;
+				    break;
+				case "0xE":
+				    i++;
+				    if (i > command.size - 1) {
+				        remove();
+					}
+				    
+				    laserIntensity = unhex(command[i].substring(2, command[i].length));
+					break;
+			}
 
-		strokeWeight(2);
-		if (laserEnabled) {
-		    stroke(0, 100, 50, laserIntensity);
-		} else {
-		    stroke(100, 50, 0, 100);
-		}
-
-		point(px3, py3);
+			px2 = (int)(cos(theta1) * l1);
+			py2 = (int)(sin(theta1) * l1);
+			px3 = (int)(cos(theta2 + theta1) * l2) + px2;
+			py3 = (int)(sin(theta2 + theta1) * l2) + py2;
 
 
-		i++;
-		if (i > command.size-1) {
-			i = 0;
+			strokeWeight(2);
+			if (laserEnabled) {
+				stroke(0, 100, 50, laserIntensity);
+			} else {
+				stroke(100, 50, 0, 100);
+			}
+
+			point(px3, py3);
+
+
+			i++;
+			if (i > command.size-1) {
+				i = 0;
+			}
 		}
 	}
+  	
+
+}
+
+function readFile(file) {
+	command = loadStrings(file);
+	fileLoaded = true;
 }
 
 function windowResized() {
