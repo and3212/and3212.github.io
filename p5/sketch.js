@@ -55,7 +55,7 @@ function draw() {
     translate(60, (60 + (l1+l2)/2) -height);
     translate(l1 + l2, 0);  // Move the origin to the center of the arc
   
-	for (var k = 0; k < 10; k++) {
+	for (var k = 0; k < 15; k++) {
 		//Math for angles
 		switch (command[i]) {
 		    case "0x1":
