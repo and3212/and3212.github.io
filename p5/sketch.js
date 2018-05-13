@@ -47,6 +47,10 @@ function setup() {
     // Draws the end of the "Table"
     strokeWeight(3);
     line(-width, 0, width, 0);
+
+	slider = createSlider(0, 30, 15, 1);
+  	slider.position(-40, -50);
+  	slider.style('width', '80px');
 }
 
 function draw() {
@@ -55,7 +59,7 @@ function draw() {
     translate(60, (60 + (l1+l2)/2) -height);
     translate(l1 + l2, 0);  // Move the origin to the center of the arc
   
-	for (var k = 0; k < 15; k++) {
+	for (var k = 0; k < slider.value(); k++) {
 		//Math for angles
 		switch (command[i]) {
 		    case "0x1":
