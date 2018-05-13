@@ -127,23 +127,3 @@ function draw() {
 		}
 	}
 }
-
-function windowResized() {
-	resizeCanvas(windowWidth, windowHeight);
-	slider.position((windowWidth/2)-(150/2), windowHeight - 100);
-
-	// Shifts the origin to the bottom left
-    scale(1, -1);
-    translate(60, (60 + (l1+l2)/2) -height);
-
-    // Draws an arc that represents the max cutting size
-    noFill();
-    stroke(255);
-    strokeWeight(3);
-    arc(l1 + l2, 0, 2 * (l1 + l2), 2 * (l1 +  l2), 0, PI);
-    translate(l1 + l2, 0);  // Move the origin to the center of the arc
-
-    // Draws the end of the "Table"
-    strokeWeight(3);
-    line(-width, 0, width, 0);
-}
