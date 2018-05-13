@@ -1,55 +1,69 @@
 // Length of the arms
-int l1 = 240;
-int l2 = 240;
+var l1 = 240;
+var l2 = 240;
 
 // Angles of the arms
-float theta1 = 0.0;
-float theta2 = 0.0;
-int x1;
-int y1;
-int x2;
-int y2;
-float MOTORSTEP = (0.25*PI/180.0);
-float addPi1;
-float addPi2;
+var theta1 = 0.0;
+var theta2 = 0.0;
+var x1;
+var y1;
+var x2;
+var y2;
+var MOTORSTEP = 0.5 * Math.PI / 180.0;
+var addPi1;
+var addPi2;
 
-// Points for the lines to display the arms
-int px1 = 0;
-int py1 = 0;
-int px2;
-int py2;
-int px3;
-int py3;
+// Povars for the lines to display the arms
+var px1 = 0;
+var py1 = 0;
+var px2;
+var py2;
+var px3;
+var py3;
+// Length of the arms
+var l1 = 240;
+var l2 = 240;
 
-String[] command;
-boolean laserEnabled = false;
-int laserIntensity = 255;
+// Angles of the arms
+var theta1 = 0.0;
+var theta2 = 0.0;
+var x1;
+var y1;
+var x2;
+var y2;
+var MOTORSTEP = 0.25 * Math.PI / 180.0;
+var addPi1;
+var addPi2;
 
-IntList xCoord_ON;
-IntList yCoord_ON;
-IntList laserStrength_PerPoint;
-IntList xCoord_OFF;
-IntList yCoord_OFF;
+// Povars for the lines to display the arms
+var px1 = 0;
+var py1 = 0;
+var px2;
+var py2;
+var px3;
+var py3;
 
-void setup() {
-    size(1080, 1000);
+var command;
+var laserEnabled = false;
+var laserIntensity = 255;
+
+var xCoord_ON = [];
+var yCoord_ON = [];
+var laserStrength_PerPoint = [];
+var xCoord_OFF = [];
+var yCoord_OFF = [];
+
+var i = 0;
+
+function setup() {
+		createCanvas(1080, 1000);
     background(0);
     frameRate(120);
-    xCoord_ON = new IntList();
-    yCoord_ON = new IntList();
-    xCoord_OFF = new IntList();
-    yCoord_OFF = new IntList();
-    laserStrength_PerPoint = new IntList();
-    command = loadStrings("step.txt");
+    command = loadStrings("p5/step.txt");
 }
 
-// Loop values
-int i = 0;
-
-// Main loop
-void draw() {
-    println(i);
-    background(0);
+function draw() {
+  background(0);
 
     // Shifts the origin to the bottom left
     scale(1, -1);
@@ -105,13 +119,15 @@ void draw() {
             break;
         case "0xE":
             i++;
-            if (i > command.length - 1) {
-                exit();
-            }
-            laserIntensity = unhex(command[i].substring(2, command[i].length()));
+            if (i > command.size - 1) {
+                remove();
+			}
+            
+            laserIntensity = unhex(command[i].substring(2, command[i].length));
+			break;
     }
 
-
+// 
     // println(theta1 + addPi1);
     px2 = (int)(cos(theta1) * l1);
     py2 = (int)(sin(theta1) * l1);
@@ -130,30 +146,30 @@ void draw() {
     point(px2, py2);
 
     if (laserEnabled) {
-        xCoord_ON.append(px3);
-        yCoord_ON.append(py3);
-        laserStrength_PerPoint.append(laserIntensity);
+        xCoord_ON.push(px3);
+        yCoord_ON.push(py3);
+        laserStrength_PerPoint.push(laserIntensity);
     } else {
-        xCoord_OFF.append(px3);
-        yCoord_OFF.append(py3);
+        xCoord_OFF.push(px3);
+        yCoord_OFF.push(py3);
     }
 
     strokeWeight(2);
-    for (int j = 0; j < xCoord_ON.size(); j++) {
-        stroke(0, 100, 50, laserStrength_PerPoint.get(j));
-        point(xCoord_ON.get(j), yCoord_ON.get(j));
+    for (var j = 0; j < xCoord_ON.length; j++) {
+        stroke(0, 100, 50, laserStrength_PerPoint[j]);
+        point(xCoord_ON[j], yCoord_ON[j]);
     }
 
-    for (int j = 0; j < xCoord_OFF.size(); j++) {
+    for (var j = 0; j < xCoord_OFF.length; j++) {
         stroke(100, 50, 0, 100);
-        point(xCoord_OFF.get(j), yCoord_OFF.get(j));
+        point(xCoord_OFF[j], yCoord_OFF[j]);
     }
 
 
     i++;
-    if (i > command.length-1) {
-        println("Finished");
-        delay(5000);
-        exit();
+    if (i > command.size-1) {
+        // delay(5000);
+        // exit();
+		i = 0;
     }
 }
