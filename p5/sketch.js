@@ -47,6 +47,10 @@ function setup() {
     // Draws the end of the "Table"
     strokeWeight(3);
     line(-width, 0, width, 0);
+
+	slider = createSlider(0, 30, 15, 1);
+  	slider.position(465 ,850);
+  	slider.style('width', '150px');
 }
 
 function draw() {
