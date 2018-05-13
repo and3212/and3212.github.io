@@ -48,8 +48,8 @@ function setup() {
     strokeWeight(3);
     line(-width, 0, width, 0);
 
-	slider = createSlider(1, 30, 15, 1);
-  	slider.position(465 ,850);
+	slider = createSlider(1, 100, 15, 1);
+  	slider.position((windowWidth/2)-(150/2) ,750);
   	slider.style('width', '150px');
 }
 
