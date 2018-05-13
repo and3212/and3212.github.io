@@ -21,6 +21,7 @@ int py2;
 int px3;
 int py3;
 
+String[] command;
 boolean laserEnabled = false;
 int laserIntensity = 255;
 
@@ -29,18 +30,17 @@ IntList yCoord_ON;
 IntList laserStrength_PerPoint;
 IntList xCoord_OFF;
 IntList yCoord_OFF;
-Table coords;
 
 void setup() {
     size(1080, 1000);
     background(0);
     frameRate(120);
-    coords = loadTable("gcode.csv");
     xCoord_ON = new IntList();
     yCoord_ON = new IntList();
     xCoord_OFF = new IntList();
     yCoord_OFF = new IntList();
     laserStrength_PerPoint = new IntList();
+    command = loadStrings("step.txt");
 }
 
 // Loop values
@@ -48,6 +48,7 @@ int i = 0;
 
 // Main loop
 void draw() {
+    println(i);
     background(0);
 
     // Shifts the origin to the bottom left
@@ -68,7 +69,7 @@ void draw() {
 /////////////////////////////////////////////////////////////////////
 
     //Math for angles
-    switch (coords.getString(i, 0)) {
+    switch (command[i]) {
         case "0x1":
             theta1 += MOTORSTEP;
             break;
@@ -104,7 +105,10 @@ void draw() {
             break;
         case "0xE":
             i++;
-            laserIntensity = unhex(coords.getString(i, 0).substring(2, coords.getString(i, 0).length()));
+            if (i > command.length - 1) {
+                exit();
+            }
+            laserIntensity = unhex(command[i].substring(2, command[i].length()));
     }
 
 
@@ -145,85 +149,11 @@ void draw() {
         point(xCoord_OFF.get(j), yCoord_OFF.get(j));
     }
 
+
     i++;
-    if (i > coords.getRowCount()-1) {
+    if (i > command.length-1) {
+        println("Finished");
         delay(5000);
         exit();
     }
 }
-
-// void clean() {
-//     std::string command;
-//     std::ifstream stepFile (STEPFILE_PATH);
-// //    std::ifstream stepFile ("../res/test.txt");
-//     std::ofstream temp (TEMPFILE_PATH);
-//     int currentCommand;
-//     int lastCommand = 0;
-//     bool firstLoop = true;
-//     int optimizedCommand;
-//
-//     while(stepFile >> std::ws && getline(stepFile, command)) {
-//         if (firstLoop) {
-//             lastCommand = std::stoi(command, nullptr, 16);
-//             firstLoop = false;
-//             continue;
-//         }
-//
-//         currentCommand = std::stoi(command, nullptr, 16);
-//
-//         if (lastCommand == 0xE) {
-//             temp << "0x" << std::hex << std::uppercase << lastCommand << "\n";
-//             temp << "0x" << std::hex << std::uppercase << currentCommand << "\n";
-//             getline(stepFile, command);
-//             lastCommand = std::stoi(command, nullptr, 16);
-//             continue;
-//         }
-//
-//         if (currentCommand == 0xE) {
-//             temp << "0x" << std::hex << std::uppercase << lastCommand << "\n";
-//             temp << "0x" << std::hex << std::uppercase << currentCommand << "\n";
-//             getline(stepFile, command);
-//             temp << command << "\n";
-//             getline(stepFile, command);
-//             lastCommand = std::stoi(command, nullptr, 16);
-//             continue;
-//         }
-//
-//         // GOOD TO GO
-//         if ((lastCommand & 0b1100) == 0b1000 || (lastCommand & 0b0011) == 0b0010) {
-//             temp << "0x" << std::hex << std::uppercase << lastCommand << "\n";
-//             lastCommand = currentCommand;
-//             continue;
-//         }
-//
-//         // Checks to see if current command contains any of our special cases
-//         else if ((currentCommand & 0b1100) == 0b1000 || (currentCommand & 0b0011) == 0b0010) {
-//             temp << "0x" << std::hex << std::uppercase << lastCommand <<"\n";
-//             temp << "0x" << std::hex << std::uppercase << currentCommand << "\n";
-//             getline(stepFile, command);
-//             lastCommand = std::stoi(command, nullptr, 16);
-//             continue;
-//         } else {
-//             optimizedCommand = lastCommand | currentCommand;
-//
-//             if ((optimizedCommand & 0b0101) == 0x5) {
-//                 temp << "0x" << std::hex << std::uppercase << optimizedCommand << "\n";
-//                 getline(stepFile, command);
-//                 lastCommand = std::stoi(command, nullptr, 16);
-//                 continue;
-//             } else {
-//                 temp << "0x" << std::hex << std::uppercase << lastCommand << "\n";
-//                 lastCommand = currentCommand;
-//             }
-//         }
-//     }
-//
-//     temp << "0x" << std::hex << std::uppercase << currentCommand << "\n";
-//
-//
-//     stepFile.close();
-//     temp.close();
-//
-// //    std::remove(STEPFILE_PATH.c_str());
-//     std::rename(TEMPFILE_PATH.c_str(), STEPFILE_PATH.c_str());
-// }
