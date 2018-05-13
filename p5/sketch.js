@@ -33,23 +33,23 @@ function setup() {
     frameRate(120);
     command = loadStrings("p5/step.txt");
 
-    // Shifts the origin to the bottom left
-    scale(1, -1);
-    translate(60, (60 + (l1+l2)/2) -height);
-
     // Draws an arc that represents the max cutting size
     noFill();
     stroke(255);
     strokeWeight(3);
     arc(l1 + l2, 0, 2 * (l1 + l2), 2 * (l1 +  l2), 0, PI);
-    translate(l1 + l2, 0);  // Move the origin to the center of the arc
-
+  
     // Draws the end of the "Table"
     strokeWeight(3);
     line(-width, 0, width, 0);
 }
 
 function draw() {
+	// Shifts the origin to the bottom left
+	scale(1, -1);
+    translate(60, (60 + (l1+l2)/2) -height);
+	translate(l1 + l2, 0);  // Move the origin to the center of the arc
+
   
     //Math for angles
     switch (command[i]) {
