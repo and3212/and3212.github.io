@@ -49,7 +49,7 @@ function setup() {
     line(-width, 0, width, 0);
 
 	slider = createSlider(1, 100, 15, 1);
-  	slider.position((windowWidth/2)-(150/2) ,750);
+  	slider.position((windowWidth/2)-(150/2), windowHeight - 200);
   	slider.style('width', '150px');
 }
 
@@ -126,4 +126,9 @@ function draw() {
 			i = 0;
 		}
 	}
+}
+
+function windowResized() {
+	resizeCanvas(windowWidth, windowHeight);
+	slider.position((windowWidth/2)-(150/2), windowHeight - 200);
 }
