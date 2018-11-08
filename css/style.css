@@ -187,10 +187,7 @@ VERSION:	1.0.0
 }
 
 
-.header.main {
-  background: url(../images/team/team-1.jpg) no-repeat;
-  background-size: cover;
-  background-position: center; }
+
 
 .header_video {
   position: relative; }
@@ -205,21 +202,278 @@ VERSION:	1.0.0
 
 
 
-
-
-#myVideo {
-/*    position: fixed;*/
-/*    right: 0;*/
-/*    bottom: 0;*/
-/*    min-width: 100px; */
-/*    min-height: 100px;*/
-  position: relative;
-  width = 100%;
-  height = 100%;
+.video-container { 
+    position:relative;
+    height: 900px;
+    overflow: hidden;
+    background: #303032;
 }
 
-.this {
-  width = 100%;
+.video-container video{
+    width: 100%;
+}
+
+.video-text-container {
+    margin-top: 5%;
+    color: rgba(40,40,40,1);
+}
+
+.video-container h1 {
+    position: absolute;
+    text-align: left;
+    font-size: 48px;
+    color: white;
+    height: 180px;
+}
+
+.video-container h2 {
+    font-size: 20px;
+    color: white;
+    height: 90px;
+    align-items: baseline;
+}
+
+.overlay-desc {
+  background: rgba(0,0,0,0.8);
+  width: 35%;
+  height: 50%;
+  margin-left: 63%;
+  margin-top: 2%;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  display: flex;
+  align-items: top;
+  justify-content: center;
+    border-radius: 35px;
+}
+
+.overlay-desc li{
+  padding: 14px
+}
+
+/*iPad Pro Portrait*/
+@media (max-width: 1100px) {
+    .video-container{
+    height: 900px;
+    }
+    .header_video:before {
+        position: relative;
+        height: 100%;
+    }
+    
+    .video-container video{
+    position: static;
+    height: 1470px;
+    }
+    
+    .overlay-desc {
+    width: 100%;
+    height: 450px;
+    margin-left: 0%;
+    margin-top: 0%;
+    border-radius: 0px;
+    background: rgba(0,0,0,1);    
+    }
+    
+    .overlay-desc li{
+    padding-bottom: 0px;
+    } 
+}
+
+/*iPad Pro Portrait*/
+@media (max-width: 900px) {
+    .video-container{
+    height: 900px;
+    }
+    .header_video:before {
+        position: relative;
+        height: 100%;
+    }
+    
+    .video-container video{
+    position: static;
+    height: 1350px;
+    }
+    
+    .overlay-desc {
+    width: 100%;
+    height: 450px;
+    margin-left: 0%;
+    margin-top: 0%;
+    border-radius: 0px;
+    background: rgba(0,0,0,1);    
+    }
+    
+    .overlay-desc li{
+    padding-bottom: 0px;
+    } 
+}
+
+/*iPad Portrait*/
+@media (max-width: 780px) {
+    .video-container{
+    height: 900px;
+    }
+    .header_video:before {
+        position: relative;
+        height: 100%;
+    }
+    
+    .video-container video{
+    position: static;
+    height: 1300px;
+    }
+    
+    .overlay-desc {
+    width: 100%;
+    height: 450px;
+    margin-left: 0%;
+    margin-top: 0%;
+    border-radius: 0px;
+    background: rgba(0,0,0,1);    
+    }
+    
+    .overlay-desc li{
+    padding-bottom: 0px;
+    } 
+}
+
+/*iPhone X*/
+@media (max-width: 670px) {
+    .video-container{
+    height: 720px;
+    }
+    .header_video:before {
+        position: relative;
+        height: 100%;
+    }
+    
+    .video-container video{
+    position: static;
+    height: 1350px;
+    }
+    
+    .overlay-desc {
+    width: 100%;
+    height: 500px;
+    margin-left: 0%;
+    margin-top: 0%;
+    border-radius: 0px;
+    background: rgba(0,0,0,1);    
+    }
+    
+    .overlay-desc li{
+    padding-bottom: 45px;
+    } 
+}
+
+/*iPhone X*/
+@media (max-width: 570px) {
+    .video-container{
+    height: 720px;
+    }
+    .header_video:before {
+        position: relative;
+        height: 100%;
+    }
+    
+    .video-container video{
+    position: static;
+    height: 1300px;
+    }
+    
+    .overlay-desc {
+    width: 100%;
+    height: 500px;
+    margin-left: 0%;
+    margin-top: 0%;
+    border-radius: 0px;
+    background: rgba(0,0,0,1);    
+    }
+    
+    .overlay-desc li{
+    padding-bottom: 45px;
+    } 
+}
+
+/*iPhone X*/
+@media (max-width: 500px) {
+    .video-container{
+    height: 670px;
+    }
+    .header_video:before {
+        position: relative;
+        height: 100%;
+    }
+    
+    .video-container video{
+    position: static;
+    height: 1210px;
+    }
+    
+    .overlay-desc {
+    width: 100%;
+    height: 500px;
+    margin-left: 0%;
+    margin-top: 0%;
+    border-radius: 0px;
+    background: rgba(0,0,0,1);    
+    }
+    
+    .overlay-desc li{
+    padding-bottom: 45px;
+    } 
+}
+
+/*iPhone X*/
+@media (max-width: 360px) {
+    .video-container{
+    height: 670px;
+    }
+    .header_video:before {
+        position: relative;
+        height: 100%;
+    }
+    
+    .video-container video{
+    position: static;
+    height: 1180px;
+    }
+    
+    .overlay-desc {
+    width: 100%;
+    height: 500px;
+    margin-left: 0%;
+    margin-top: 0%;
+    border-radius: 0px;
+    background: rgba(0,0,0,1);    
+    }
+    
+    .overlay-desc li{
+    padding-bottom: 45px;
+    }
+  
+  .overlay-desc h1{
+    font-size: 46px;
+  }
+}
+
+.email-form{
+    border-width: 10px;
+    border-color: #323232;
+    background: #f0f0f0;
+}
+
+.transparent-text{
+    color: transparent;
+}
+
+}
+.overlay {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1;
 }
 
 .over {
@@ -497,6 +751,10 @@ button {
   padding: 50px 0;
 }
 
+.home-section{
+    padding:0px;
+}
+
 @media (max-width: 575px) {
   .section {
     padding: 80px 0;
@@ -530,7 +788,7 @@ button {
   top: 0;
   left: 0;
   background: #000;
-  opacity: .6;
+  opacity: .3;
 }
 
 .overlay-dark {
@@ -1033,7 +1291,7 @@ button {
 
 .navigation .navbar {
   padding: 0;
-  background: #fff !important;
+  background: transparent !important;
   position: relative;
 }
 
@@ -2661,6 +2919,19 @@ ul.tag-list li a:hover {
 .footer-links li a:hover {
   text-decoration: underline;
   color: var(--main-bg-color);
+}
+
+.video-headings{
+    padding: 5%;
+}
+
+.video-headings li:not(:last-child) {
+  position: relative;
+    margin-bottom: 140px;
+}
+
+#video-button {
+    margin-bottom:10px;
 }
 
 /* 25.3 subcription */
